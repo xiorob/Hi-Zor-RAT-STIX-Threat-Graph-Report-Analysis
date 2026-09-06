@@ -6,7 +6,7 @@ Full report on a certain malware RAT called Hi-Zor RAT, including a full analysi
 ## Overview
 This project models and analyzes unstructured threat intelligence on the **Hi-Zor RAT (Software S0087)** using standardized threat frameworks. By translating raw malware telemetry and multi-stage kill chain behaviors into structured **STIX graph objects**, I mapped entity relationships using **STIXViz** to visualize adversary tactics, infrastructure, and technical indicators across the campaign.
 
-![STIX Graph Preview](stix-threat-graph-modeling/visualizations/STIXViz9-6-2026.png)
+![STIX Graph Preview](stix-threat-graph-modeling/visualization/STIXViz9-6-2026.png)
 
 ## Data Architecture & Analytics Methodology
 
