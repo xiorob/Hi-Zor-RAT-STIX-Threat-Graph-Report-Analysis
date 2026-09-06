@@ -1,0 +1,41 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:HostnameObj="http://cybox.mitre.org/objects#HostnameObject-1"
+	xmlns:PortObj="http://cybox.mitre.org/objects#PortObject-2"
+	xmlns:SocketAddressObj="http://cybox.mitre.org/objects#SocketAddressObject-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:FC2="http://usf.edu"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-ced210a1-5979-4408-82ba-c89d3722f0fc" version="1.1.1" timestamp="2025-12-01T23:45:57.256370+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="FC2:observable-924a48ff-73a9-423a-b798-5b0fc3a08bb6">
+            <cybox:Title>Reverse Shell</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="FC2:socket-34155f22-f7d7-4832-ab80-d9ab2a998580">
+                <cybox:Properties xsi:type="SocketAddressObj:SocketAddressObjectType">
+                    <SocketAddressObj:Hostname xsi:type="HostnameObj:HostnameObjectType">
+                        <HostnameObj:Hostname_Value>inocnation[dot]com</HostnameObj:Hostname_Value>
+                    </SocketAddressObj:Hostname>
+                    <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                        <PortObj:Port_Value>80</PortObj:Port_Value>
+                        <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+                    </SocketAddressObj:Port>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+</stix:STIX_Package>

@@ -1,0 +1,34 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:FC2="http://usf.edu"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-9536467b-82e3-4d66-ad8f-ee5df6bf15cd" version="1.1.1" timestamp="2025-12-01T23:46:31.059903+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="FC2:ttp-776d5ad3-d0b1-4c1c-a54b-125f3681a429" timestamp="2025-12-01T22:52:57.153973+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Social Engineering</ttp:Title>
+            <ttp:Short_Description>was friendly to executive to get his information</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+    </stix:TTPs>
+</stix:STIX_Package>

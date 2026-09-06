@@ -1,0 +1,33 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:FC2="http://usf.edu"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-419f4a64-ee03-495b-a557-2f76738bb221" version="1.1.1" timestamp="2025-12-01T23:46:50.223161+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="FC2:observable-b23dbf27-9c3c-4450-9cca-424e22e2273b">
+            <cybox:Title>Malicious Address</cybox:Title>
+            <cybox:Description>Suspicious e-mail address sent by trusted person</cybox:Description>
+            <cybox:Object id="FC2:address-0e7e0779-0c3b-40f3-a88a-6e8fcc4209c5">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail" is_source="true" is_spoofed="true">
+                    <AddressObj:Address_Value> devontahurts@yahoo.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+</stix:STIX_Package>

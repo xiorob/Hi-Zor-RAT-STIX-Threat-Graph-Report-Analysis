@@ -1,0 +1,429 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:HostnameObj="http://cybox.mitre.org/objects#HostnameObject-1"
+	xmlns:PortObj="http://cybox.mitre.org/objects#PortObject-2"
+	xmlns:SocketAddressObj="http://cybox.mitre.org/objects#SocketAddressObject-1"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:edge="http://soltra.com/"
+	xmlns:campaign="http://stix.mitre.org/Campaign-1"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:FC2="http://usf.edu"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="edge:Package-46e9e330-54fb-44af-b59e-18f16bab6350" version="1.1.1" timestamp="2025-12-01T23:45:34.200181+00:00">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="FC2:observable-daf1a304-7623-4e13-ae3b-4ea7d0f284e6">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="FC2:observable-564e37dd-60f8-42da-aadb-eac1e5cef1a1">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-564e37dd-60f8-42da-aadb-eac1e5cef1a1">
+            <cybox:Title>AdobePlayer</cybox:Title>
+            <cybox:Description>fake adobe</cybox:Description>
+            <cybox:Object id="FC2:file-cbd8e038-8374-4903-a9d5-ec02d0050e38">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>regsvr32 /s "%APPDATA%\adobe\adobe.dat"</FileObj:File_Name>
+                    <FileObj:Device_Path/>
+                    <FileObj:Full_Path/>
+                    <FileObj:File_Extension/>
+                    <FileObj:Size_In_Bytes>10000</FileObj:Size_In_Bytes>
+                    <FileObj:File_Format>.dll</FileObj:File_Format>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>75d3d1f23628122a64a2f1b7ef33f5cf</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>cd07ac5947c643854375603800a4f70e2dfe202c8a1f801204328921cb3a2a4c</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-cc9e70f1-0eb8-40e7-937c-01134a26208c">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="FC2:observable-cb40a11d-d61e-4eaf-843a-6fb17c0e5b1c">
+                </cybox:Observable>
+                <cybox:Observable idref="FC2:observable-b23dbf27-9c3c-4450-9cca-424e22e2273b">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-cb40a11d-d61e-4eaf-843a-6fb17c0e5b1c">
+            <cybox:Title>Unusual HTTP Traffic</cybox:Title>
+            <cybox:Description>Port 80 has C2 activity.</cybox:Description>
+            <cybox:Object id="FC2:file-2b165e5d-d939-4d58-a0da-739aa135e71c">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>httpc2.doc</FileObj:File_Name>
+                    <FileObj:File_Path>Documents</FileObj:File_Path>
+                    <FileObj:Device_Path/>
+                    <FileObj:Full_Path/>
+                    <FileObj:File_Extension>.doc</FileObj:File_Extension>
+                    <FileObj:Size_In_Bytes>10000</FileObj:Size_In_Bytes>
+                    <FileObj:File_Format>Word</FileObj:File_Format>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-b23dbf27-9c3c-4450-9cca-424e22e2273b">
+            <cybox:Title>Malicious Address</cybox:Title>
+            <cybox:Description>Suspicious e-mail address sent by trusted person</cybox:Description>
+            <cybox:Object id="FC2:address-0e7e0779-0c3b-40f3-a88a-6e8fcc4209c5">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail" is_source="true" is_spoofed="true">
+                    <AddressObj:Address_Value> devontahurts@yahoo.com</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-ab063b3e-436f-444f-a71c-3e766b6a7141">
+            <cybox:Observable_Composition operator="OR">
+                <cybox:Observable idref="FC2:observable-924a48ff-73a9-423a-b798-5b0fc3a08bb6">
+                </cybox:Observable>
+            </cybox:Observable_Composition>
+        </cybox:Observable>
+        <cybox:Observable id="FC2:observable-924a48ff-73a9-423a-b798-5b0fc3a08bb6">
+            <cybox:Title>Reverse Shell</cybox:Title>
+            <cybox:Description/>
+            <cybox:Object id="FC2:socket-34155f22-f7d7-4832-ab80-d9ab2a998580">
+                <cybox:Properties xsi:type="SocketAddressObj:SocketAddressObjectType">
+                    <SocketAddressObj:Hostname xsi:type="HostnameObj:HostnameObjectType">
+                        <HostnameObj:Hostname_Value>inocnation[dot]com</HostnameObj:Hostname_Value>
+                    </SocketAddressObj:Hostname>
+                    <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                        <PortObj:Port_Value>80</PortObj:Port_Value>
+                        <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+                    </SocketAddressObj:Port>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="FC2:indicator-dbac30b3-e5a0-465b-ad88-46e5ca9db465" timestamp="2025-12-01T23:10:55.099828+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>adobe.dat</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Short_Description>Odd looking file format</indicator:Short_Description>
+            <indicator:Observable idref="FC2:observable-daf1a304-7623-4e13-ae3b-4ea7d0f284e6">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2025-12-01T23:10:55.099905+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity id="FC2:identity-60f356b6-90ad-4352-be07-9490c593b203">
+                    <stixCommon:Name>Admin User &lt;admin@admin.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="FC2:indicator-4c3d2aeb-5cce-475d-92a7-2e4ba63b408d" timestamp="2025-12-01T22:38:09.425450+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>HTTP Port Activity</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">C2</indicator:Type>
+            <indicator:Short_Description>Port 80 has unusual activity</indicator:Short_Description>
+            <indicator:Observable idref="FC2:observable-cc9e70f1-0eb8-40e7-937c-01134a26208c">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2025-12-01T22:38:09.425516+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity id="FC2:identity-c3ae4011-9f81-4d12-a6a1-363e58291153">
+                    <stixCommon:Name>Admin User &lt;admin@admin.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="FC2:indicator-fe39057c-9719-4be0-8837-3e773eadab05" timestamp="2025-12-01T23:14:58.861441+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Reverse Shell Execution</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Anonymization</indicator:Type>
+            <indicator:Short_Description>attacker uses reverse shell to launch hidden commands</indicator:Short_Description>
+            <indicator:Observable idref="FC2:observable-ab063b3e-436f-444f-a71c-3e766b6a7141">
+            </indicator:Observable>
+            <indicator:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </indicator:Handling>
+            <indicator:Confidence timestamp="2025-12-01T23:14:58.861480+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </indicator:Confidence>
+            <indicator:Producer>
+                <stixCommon:Identity id="FC2:identity-ede196fa-c76e-4b5d-bb53-337148efec22">
+                    <stixCommon:Name>Admin User &lt;admin@admin.com&gt;</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="FC2:ttp-cd2686d6-7f2f-43f7-9e96-fba50ccbb81c" timestamp="2025-12-01T22:56:41.730691+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Use Port 80</ttp:Title>
+            <ttp:Short_Description>HTTP is the port of choice</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-8f812d69-7e71-43f2-8d2a-b8f4aa440928" timestamp="2025-12-01T22:55:13.683535+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Ingress Tool Transfer</ttp:Title>
+            <ttp:Short_Description>Installs and deletes files on victim's system</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-ad479384-6dd0-49c3-b8d0-e4d92e037817" timestamp="2025-12-01T22:53:34.224579+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Screen Capture</ttp:Title>
+            <ttp:Short_Description>Used to record pixels of victim's computer</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-01f5e5af-a90c-4a35-927c-5ccc1eaed6eb" timestamp="2025-12-01T22:56:07.167848+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Create Run Key</ttp:Title>
+            <ttp:Short_Description>Run Key is made, and file is put inside to run on boot</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-776d5ad3-d0b1-4c1c-a54b-125f3681a429" timestamp="2025-12-01T22:52:57.153973+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Social Engineering</ttp:Title>
+            <ttp:Short_Description>was friendly to executive to get his information</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-818bfdd5-c78c-4d48-a35b-972ebb3ed084" timestamp="2025-12-01T22:57:16.720375+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>LinkedIn</ttp:Title>
+            <ttp:Short_Description>To find a job interview and emails of executives</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-e6313dc0-4653-4e93-b7cf-da25f3e58dfa" timestamp="2025-12-01T23:04:07.119471+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Cisco's AnyConnect</ttp:Title>
+            <ttp:Short_Description>used to transfer file</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-78ec003d-3fa8-4e5b-bbc5-50bc9ffdf969" timestamp="2025-12-01T22:51:17.555520+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Hi-Zor RAT</ttp:Title>
+            <ttp:Short_Description>Trojan used to gain access</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-d82ef75c-ef17-4000-8a5a-083b9e232c90" timestamp="2025-12-01T22:52:21.169818+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Spearphishing</ttp:Title>
+            <ttp:Short_Description>targeted a person of power to gain info</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-593d10a8-b63b-423d-b334-b62038c843da" timestamp="2025-12-01T23:04:33.000481+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Google Drive</ttp:Title>
+            <ttp:Short_Description>Used to keep malicious PDF in</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-95695ddf-1bc2-409f-95ea-13164b208870" timestamp="2025-12-01T22:58:08.104034+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Fake HTML file through PDF</ttp:Title>
+            <ttp:Short_Description>made to trick victim</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-dcaff4ce-2797-41ec-a7cb-e04e01857152" timestamp="2025-12-01T22:54:04.720488+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Using C2 Channel</ttp:Title>
+            <ttp:Short_Description>Made reverse shell to call c2 channel</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+        <stix:TTP id="FC2:ttp-86fc9f51-7353-4d2e-9919-546b6beeb5da" timestamp="2025-12-01T23:06:13.074134+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Obfuscation</ttp:Title>
+            <ttp:Short_Description>makes regsvr.exe hard to find and analyze</ttp:Short_Description>
+            <ttp:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </ttp:Handling>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="FC2:incident-95665455-cbf0-418d-b7d0-e67900c881c0" timestamp="2025-12-01T23:39:04.205172+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>RAT Infection</incident:Title>
+            <incident:Short_Description>Company secrets stolen from system</incident:Short_Description>
+            <incident:Related_Indicators>
+                <incident:Related_Indicator>
+                    <stixCommon:Indicator idref="FC2:indicator-4c3d2aeb-5cce-475d-92a7-2e4ba63b408d" xsi:type='indicator:IndicatorType'/>
+                </incident:Related_Indicator>
+            </incident:Related_Indicators>
+            <incident:Related_Observables>
+                <incident:Related_Observable>
+                    <stixCommon:Observable idref="FC2:observable-cb40a11d-d61e-4eaf-843a-6fb17c0e5b1c">
+                    </stixCommon:Observable>
+                </incident:Related_Observable>
+                <incident:Related_Observable>
+                    <stixCommon:Observable idref="FC2:observable-b23dbf27-9c3c-4450-9cca-424e22e2273b">
+                    </stixCommon:Observable>
+                </incident:Related_Observable>
+            </incident:Related_Observables>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-593d10a8-b63b-423d-b334-b62038c843da" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-e6313dc0-4653-4e93-b7cf-da25f3e58dfa" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-818bfdd5-c78c-4d48-a35b-972ebb3ed084" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-dcaff4ce-2797-41ec-a7cb-e04e01857152" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-78ec003d-3fa8-4e5b-bbc5-50bc9ffdf969" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </incident:Handling>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Campaigns>
+        <stix:Campaign id="FC2:campaign-a3c6704a-99c5-48d2-a837-1dd9df56df30" timestamp="2025-12-01T23:38:25.566493+00:00" xsi:type='campaign:CampaignType'>
+            <campaign:Title>Leaking Information</campaign:Title>
+            <campaign:Short_Description>Adversary wants to steal and expose info</campaign:Short_Description>
+            <campaign:Status xsi:type="stixVocabs:CampaignStatusVocab-1.0">Ongoing</campaign:Status>
+            <campaign:Related_TTPs>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-86fc9f51-7353-4d2e-9919-546b6beeb5da" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-593d10a8-b63b-423d-b334-b62038c843da" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-e6313dc0-4653-4e93-b7cf-da25f3e58dfa" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-95695ddf-1bc2-409f-95ea-13164b208870" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-818bfdd5-c78c-4d48-a35b-972ebb3ed084" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-cd2686d6-7f2f-43f7-9e96-fba50ccbb81c" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-01f5e5af-a90c-4a35-927c-5ccc1eaed6eb" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-8f812d69-7e71-43f2-8d2a-b8f4aa440928" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-dcaff4ce-2797-41ec-a7cb-e04e01857152" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-ad479384-6dd0-49c3-b8d0-e4d92e037817" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-776d5ad3-d0b1-4c1c-a54b-125f3681a429" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-d82ef75c-ef17-4000-8a5a-083b9e232c90" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+                <campaign:Related_TTP>
+                    <stixCommon:TTP idref="FC2:ttp-78ec003d-3fa8-4e5b-bbc5-50bc9ffdf969" xsi:type='ttp:TTPType'/>
+                </campaign:Related_TTP>
+            </campaign:Related_TTPs>
+            <campaign:Related_Incidents>
+                <campaign:Related_Incident>
+                    <stixCommon:Incident idref="FC2:incident-95665455-cbf0-418d-b7d0-e67900c881c0" xsi:type='incident:IncidentType'/>
+                </campaign:Related_Incident>
+            </campaign:Related_Incidents>
+            <campaign:Related_Indicators>
+                <campaign:Related_Indicator>
+                    <stixCommon:Indicator idref="FC2:indicator-fe39057c-9719-4be0-8837-3e773eadab05" xsi:type='indicator:IndicatorType'/>
+                </campaign:Related_Indicator>
+                <campaign:Related_Indicator>
+                    <stixCommon:Indicator idref="FC2:indicator-dbac30b3-e5a0-465b-ad88-46e5ca9db465" xsi:type='indicator:IndicatorType'/>
+                </campaign:Related_Indicator>
+                <campaign:Related_Indicator>
+                    <stixCommon:Indicator idref="FC2:indicator-4c3d2aeb-5cce-475d-92a7-2e4ba63b408d" xsi:type='indicator:IndicatorType'/>
+                </campaign:Related_Indicator>
+            </campaign:Related_Indicators>
+            <campaign:Confidence timestamp="2025-12-01T23:38:25.566468+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:HighMediumLowVocab-1.0">High</stixCommon:Value>
+            </campaign:Confidence>
+            <campaign:Handling>
+                <marking:Marking>
+                    <marking:Controlled_Structure>../../../descendant-or-self::node() | ../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                    <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="AMBER"/>
+                </marking:Marking>
+            </campaign:Handling>
+        </stix:Campaign>
+    </stix:Campaigns>
+</stix:STIX_Package>
